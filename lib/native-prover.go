@@ -4,8 +4,7 @@ package main
 import "C"
 
 //export Prove
-func Prove (args C.struct_go_args) *C.char {
-
+func Prove (args C.struct_native_prover_args) *C.char {
   return C.CString("Here is the PROOF result")
 }
 

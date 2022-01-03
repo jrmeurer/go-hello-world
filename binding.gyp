@@ -3,9 +3,11 @@
     {
       'target_name': 'native-prover',
       'sources': [
-        'libs/native-prover.h',
+        'lib/types.h',
+        'lib/native-prover.h',
         'native-prover-addon.cc'
       ],
+      'libraries': [ '../lib/native-prover.a' ],
       'include_dirs': [
         '<!(node -e \'require("nan")\')',
         '/usr/local/include/node/'
@@ -22,7 +24,7 @@
         ["OS == 'android', target_arch == 'x86'", {
             'libraries': [ '../lib/native-prover.so' ],
         }],
-        ["OS == 'android', target_arch == 'x86'", {
+        ["OS == 'android', target_arch == 'arm'", {
             'libraries': [ '../lib/native-prover.so' ],
         }],
     ],

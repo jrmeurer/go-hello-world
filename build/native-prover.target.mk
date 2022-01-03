@@ -49,13 +49,10 @@ CFLAGS_OBJC_Debug :=
 CFLAGS_OBJCC_Debug :=
 
 INCS_Debug := \
-	-I/Users/johnnym/Library/Caches/node-gyp/12.12.0/include/node \
-	-I/Users/johnnym/Library/Caches/node-gyp/12.12.0/src \
-	-I/Users/johnnym/Library/Caches/node-gyp/12.12.0/deps/openssl/config \
-	-I/Users/johnnym/Library/Caches/node-gyp/12.12.0/deps/openssl/openssl/include \
-	-I/Users/johnnym/Library/Caches/node-gyp/12.12.0/deps/uv/include \
-	-I/Users/johnnym/Library/Caches/node-gyp/12.12.0/deps/zlib \
-	-I/Users/johnnym/Library/Caches/node-gyp/12.12.0/deps/v8/include \
+	-I/Users/johnnym/.node-gyp/12.12.0/include/node \
+	-I/Users/johnnym/.node-gyp/12.12.0/src \
+	-I/Users/johnnym/.node-gyp/12.12.0/deps/uv/include \
+	-I/Users/johnnym/.node-gyp/12.12.0/deps/v8/include \
 	-I$(srcdir)/node_modules/nan \
 	-I/usr/local/include/node
 
@@ -103,13 +100,10 @@ CFLAGS_OBJC_Release :=
 CFLAGS_OBJCC_Release :=
 
 INCS_Release := \
-	-I/Users/johnnym/Library/Caches/node-gyp/12.12.0/include/node \
-	-I/Users/johnnym/Library/Caches/node-gyp/12.12.0/src \
-	-I/Users/johnnym/Library/Caches/node-gyp/12.12.0/deps/openssl/config \
-	-I/Users/johnnym/Library/Caches/node-gyp/12.12.0/deps/openssl/openssl/include \
-	-I/Users/johnnym/Library/Caches/node-gyp/12.12.0/deps/uv/include \
-	-I/Users/johnnym/Library/Caches/node-gyp/12.12.0/deps/zlib \
-	-I/Users/johnnym/Library/Caches/node-gyp/12.12.0/deps/v8/include \
+	-I/Users/johnnym/.node-gyp/12.12.0/include/node \
+	-I/Users/johnnym/.node-gyp/12.12.0/src \
+	-I/Users/johnnym/.node-gyp/12.12.0/deps/uv/include \
+	-I/Users/johnnym/.node-gyp/12.12.0/deps/v8/include \
 	-I$(srcdir)/node_modules/nan \
 	-I/usr/local/include/node
 

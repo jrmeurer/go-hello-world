@@ -72,7 +72,7 @@ typedef struct { void *data; GoInt len; GoInt cap; } GoSlice;
 extern "C" {
 #endif
 
-extern char* Prove(struct go_args args);
+extern char* Prove(struct native_prover_args args);
 
 #ifdef __cplusplus
 }

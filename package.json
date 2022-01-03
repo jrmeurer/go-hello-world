@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "preinstall": "cd lib && ./build-all",
+    "preinstall": "./build-desktop",
     "install": "node-gyp rebuild"
   },
   "dependencies": {

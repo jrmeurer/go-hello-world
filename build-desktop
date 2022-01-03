@@ -3,7 +3,6 @@
 cd lib;
 
 CMD_ARCHIVE="go build -buildmode=c-archive -o"
-CMD_SHARED_LIB="go build -buildmode=c-shared -o"
 
 FILENAME=native-prover.a
 

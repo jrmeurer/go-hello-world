@@ -3,6 +3,8 @@
   "files.associations": {
     "ios": "cpp",
     "string": "cpp",
-    "iosfwd": "cpp"
+    "iosfwd": "cpp",
+    "cstring": "cpp",
+    "stdexcept": "cpp"
   }
 }

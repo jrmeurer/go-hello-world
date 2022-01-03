@@ -22,10 +22,10 @@
             # 'sources+': [ '../lib/native-prover.h' ],
         }],
         ["OS == 'android', target_arch == 'x86'", {
-            'libraries': [ '../lib/native-prover.so' ],
+            # 'libraries': [ '../lib/native-prover.so' ],
         }],
         ["OS == 'android', target_arch == 'arm'", {
-            'libraries': [ '../lib/native-prover.so' ],
+            # 'libraries': [ '../lib/native-prover.so' ],
         }],
     ],
     }

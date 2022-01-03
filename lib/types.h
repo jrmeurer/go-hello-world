@@ -2,7 +2,7 @@
 #define SHARED_TYPES_H
 
 typedef struct native_prover_args {
-  char* input;
+  char *input;
 } NativeProverArgs;
 
 #endif

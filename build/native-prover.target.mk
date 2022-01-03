@@ -165,8 +165,7 @@ LIBTOOLFLAGS_Release := \
 	-Wl,-search_paths_first
 
 LIBS := \
-	../lib/native-prover.a \
-	../lib/native-prover.so
+	../lib/native-prover.a
 
 $(builddir)/native-prover.node: GYP_LDFLAGS := $(LDFLAGS_$(BUILDTYPE))
 $(builddir)/native-prover.node: LIBS := $(LIBS)

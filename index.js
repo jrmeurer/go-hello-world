@@ -1,9 +1,10 @@
-const addon = require('bindings')('addon');
+const np = require('bindings')('native-prover');
 
-const testObject = {
-  num: 1.243,
-};
-
-addon.doSomethingAsync(testObject).then((res) => {
+const testProve = async () => {
+  const testObject = {
+    num: 1.243,
+  };
+  const res = await np.prove(testObject);
   console.log(`promise result:\n  result: ${JSON.stringify(res)}`);
-});
+};
+testProve();

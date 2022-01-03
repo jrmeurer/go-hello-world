@@ -1,66 +1,31 @@
 {
   'targets': [
     {
-      'target_name': 'addon',
+      'target_name': 'native-prover',
       'sources': [
-        'lib/types.h',
-        'lib/libgo.h',
-        'addon.cc'
+        'libs/native-prover.h',
+        'native-prover-addon.cc'
       ],
-      'include_dirs': [ '<!(node -e \'require("nan")\')' ],
-      # libraries are relative to the 'build' directory
-      'libraries': [ '../lib/libgo.a' ],
+      'include_dirs': [
+        '<!(node -e \'require("nan")\')',
+        '/usr/local/include/node/'
+      ],
       "conditions": [
-        ["OS == 'android'", {
-            # Add stuff.
+        ["OS == 'linux'", {
+            'libraries': [ '../lib/native-prover.a' ],
+            # 'sources+': [ '../lib/native-prover.h' ],
         }],
-        ["OS == 'ios'", {
-            # Add stuff.
+        ["OS == 'mac'", {
+            'libraries': [ '../lib/native-prover.a' ],
+            # 'sources+': [ '../lib/native-prover.h' ],
         }],
-        ["target_arch == 'arm'", {
-            # Add stuff.
-        }]
+        ["OS == 'android', target_arch == 'x86'", {
+            'libraries': [ '../lib/native-prover.so' ],
+        }],
+        ["OS == 'android', target_arch == 'x86'", {
+            'libraries': [ '../lib/native-prover.so' ],
+        }],
     ],
     }
   ]
-}
-
-{
-  "targets": [{
-    "target_name": "test-hello-world",
-    "conditions": [
-      ["OS == 'linux'", {
-        "cflags": [],
-        "cflags!": [ "-fno-tree-vrp"]
-      }],
-      ["OS == 'mac'", {
-        "cflags+": ["-fvisibility=hidden"],
-        "xcode_settings": {
-          "GCC_SYMBOLS_PRIVATE_EXTERN": "YES" # -fvisibility=hidden
-        }
-      }],
-      ["OS == 'android'", {
-        "cflags": [ "-fPIC" ],
-        "ldflags": [ "-fPIC" ],
-        "cflags!": [
-          "-fno-tree-vrp",
-          "-mfloat-abi=hard",
-          "-fPIE"
-        ],
-        "ldflags!": [ "-fPIE" ]
-      }],
-      ["target_arch == 'arm'", {
-        "cflags": [ "-mfloat-abi=hard" ]
-      }]
-    ],
-    "dependencies": [
-      "<(module_root_dir)/deps/leveldb/leveldb.gyp:leveldb"
-    ],
-    "include_dirs"  : [
-      "<!(node -e \"require('napi-macros')\")"
-    ],
-    "sources": [
-      "binding.cc"
-    ]
-  }]
 }

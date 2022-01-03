@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cd lib;
+
+CMD_ARCHIVE="go build -buildmode=c-archive -o"
+
+FILENAME=native-prover.a
+
+# Builds for iOS
+echo "Building iOS: ARM"
+env GOOS=ios GOARCH=arm64 $CMD_ARCHIVE $FILENAME && echo "Done."

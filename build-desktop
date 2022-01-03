@@ -1,0 +1,12 @@
+#!/bin/bash
+
+cd lib;
+
+CMD_ARCHIVE="go build -buildmode=c-archive -o"
+CMD_SHARED_LIB="go build -buildmode=c-shared -o"
+
+FILENAME=native-prover.a
+
+# Build for Desktop
+echo "Building Desktop: x86"
+env GOARCH=amd64 $CMD_ARCHIVE $FILENAME && echo "Done.";

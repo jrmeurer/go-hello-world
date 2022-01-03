@@ -1,0 +1,12 @@
+{
+  "name": "go-hello-world",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "cd lib && ./build-all",
+    "install": "node-gyp rebuild"
+  },
+  "dependencies": {
+    "nan": "^2.15.0"
+  }
+}
